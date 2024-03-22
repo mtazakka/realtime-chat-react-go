@@ -6,7 +6,7 @@ const input = (props: any) => {
     <input
       type={type}
       id={id}
-      className="mt-1 px-4 py-2 block w-full border border-gray-400 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+      className="mt-1 px-4 py-2 block w-full border border-gray-400 rounded-md"
       placeholder={placeholder}
       name={name}
     />
