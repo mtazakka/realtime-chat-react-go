@@ -30,6 +30,12 @@ function Navigation(props: any) {
             here
           </Link>
         </p>
+        <p className="text-center font-semibold text-sm">
+          forgot password? click{" "}
+          <Link href="#" className="text-blue-500">
+            here
+          </Link>
+        </p>
       </>
     );
   } else {
