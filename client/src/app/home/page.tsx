@@ -1,18 +1,17 @@
+"use client"
+// page Home
+
 import Navbar from '../component/navbar/navbar'
+import {useCheckTokenIn} from '../component/utils/checkToken'
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+
 
 const Home = () => {
+  // useCheckTokenIn()
   return (
     <>
-      <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-      </head>
-      <body>
-        <h1>hello world</h1>
-      </body>
-      </html>
+      <Navbar />
     </>
   )
 }
