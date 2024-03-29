@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { signIn, signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 
 const MobileMenu = () => {
@@ -27,7 +26,8 @@ const ProfileDropdown = () => {
   };
   const router = useRouter()
   const Logout = () => {
-    signOut({ callbackUrl: 'http://localhost:3000/' })
+    localStorage.removeItem('token');
+    router.push('/login')
   }
 
   return (
