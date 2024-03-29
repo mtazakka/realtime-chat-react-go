@@ -2,11 +2,11 @@
 
 import FormRegister from "../component/fragment/FormRegister";
 import AuthLayout from "../component/layout/authLayout";
-import {useCheckTokenOut} from '../component/utils/checkToken'
+// import {useCheckTokenOut} from '../component/utils/checkToken'
 
 
 const Register = () => {
-  useCheckTokenOut()
+  // useCheckTokenOut()
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-3 h-screen">

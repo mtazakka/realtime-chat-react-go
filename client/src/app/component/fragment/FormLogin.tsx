@@ -5,11 +5,8 @@ import FormInput from "../FormInput/index";
 import Button from "../button/button";
 import { useState } from "react";
 import { useRouter } from 'next/navigation'; // Add this line to import the router
-// import { useCheckTokenOut } from '../utils/checkToken'
-import { signIn, signOut, useSession } from 'next-auth/react'
 
 const FormLogin = () => {
-  // useCheckTokenOut()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
@@ -79,7 +76,7 @@ const FormLogin = () => {
         >
           Enter your password
         </FormInput>
-        <Button type="submit" color="bg-blue-500 mb-4 mt-4" size="block w-full" onClick={()=>signIn()}>
+        <Button type="submit" color="bg-blue-500 mb-4 mt-4" size="block w-full" >
           Login
         </Button>
         <p id="login-message" className="text-center font-semibold text-sm mb-4 text-red-500">{loginMessage}</p>

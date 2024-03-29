@@ -27,7 +27,7 @@ export function useCheckTokenOut() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    if (token) {
+    if (!token) {
       alert("Not allowed!");
       router.push('/NoAuthorized');
     } 

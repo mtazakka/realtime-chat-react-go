@@ -8,7 +8,7 @@ import Button from "../component/button/button"; // Sesuaikan dengan path yang b
 const NoAuthorized = () => {
   const router = useRouter();
   const handleGoBack = () => {
-    router.back();
+    router.push('/login');
   };
 
   return (

@@ -2,13 +2,13 @@
 // page Home
 
 import Navbar from '../component/navbar/navbar'
-import {useCheckTokenIn} from '../component/utils/checkToken'
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import {useCheckTokenOut} from '../component/utils/checkToken'
 
 
 const Home = () => {
-  // useCheckTokenIn()
+    useCheckTokenOut()
   return (
     <>
       <Navbar />
