@@ -5,6 +5,7 @@ import Navbar from '../component/navbar/navbar'
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import {useCheckTokenOut} from '../component/utils/checkToken'
+import UserList from '../component/fragment/userList';
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
+      <UserList />
     </>
   )
 }
