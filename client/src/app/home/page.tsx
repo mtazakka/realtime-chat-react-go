@@ -1,37 +1,20 @@
-"use client"
-// page Home
+'use client'
 
 import Navbar from '../component/navbar/navbar'
-import { useCheckTokenOut } from '../component/utils/checkToken'
+import { useCheckTokenOut, useCheckTokenIn } from '../component/utils/checkToken'
 import UserList from '../component/fragment/userList';
-import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation'; // Menggunakan useRouter dari next/navigation
 
-// Define the Home component
-// Define the Home component
 const Home = () => {
-  // Call the useCheckTokenOut hook to check the token
-  useCheckTokenOut();
+  const tokenChecked = useCheckTokenOut(); // Menggunakan hook useCheckTokenOut() untuk menandai apakah pengecekan token sudah selesai
 
-  const [tokenChecked, setTokenChecked] = useState(false); // State to track if token check is completed
-
-  useEffect(() => {
-    // Update state to indicate token check is completed
-    setTokenChecked(true);
-  }, []);
-
-  // Render nothing until token check is completed
-  if (!tokenChecked) {
-    return null;
-  } else {
-    // Render Navbar and UserList once token check is completed
-    return (
-      <>
-        <Navbar />
-        <UserList />
-      </>
-    );
-  }
+  // Render komponen setelah pengecekan token selesai
+  return tokenChecked ? (
+    <>
+      <Navbar />
+      <UserList />
+    </>
+  ) : null;
 };
 
-// Export the Home component as default
 export default Home;
