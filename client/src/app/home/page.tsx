@@ -6,9 +6,13 @@ import UserList from '../component/fragment/userList';
 import { useRouter } from 'next/navigation'; // Menggunakan useRouter dari next/navigation
 
 const Home = () => {
+  const route = useRouter()
   const tokenChecked = useCheckTokenOut(); // Menggunakan hook useCheckTokenOut() untuk menandai apakah pengecekan token sudah selesai
 
-  // Render komponen setelah pengecekan token selesai
+  if (!tokenChecked) {
+    route.push("/login")
+  }
+  
   return tokenChecked ? (
     <>
       <Navbar />
